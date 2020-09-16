@@ -11,10 +11,10 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-    %th{:class => ("hilite" if @sortedby == "title")}= link_to "Movie Title", movies_path(:sortedby=>:"title")
-    %th Rating
-    %th{:class=> ("hilite" if @sortedby == "release_date")}= link_to "Release Date", movies_path(:sortedby=>"release_date")
-    %th More Info
+    %th{:class => ((@sortedby == "title") ? "hilite":"nonhilite")}= link_to "Movie Title", movies_path(:sortedby=>:"title")
+    %th{:class => ('nonhilite')} rating 
+    %th{:class => ((@sortedby == "release_date") ? "hilite":"nonhilite")}= link_to "Release Date", movies_path(:sortedby=>"release_date")
+    %th{:class => ('nonhilite')} More Info
   %tbody
     - @movies.each do |movie|
       %tr

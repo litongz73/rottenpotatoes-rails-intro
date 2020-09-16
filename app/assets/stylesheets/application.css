@@ -15,6 +15,11 @@
  */
 table#movies th.hilite {
   background-color: yellow;
+  color: yellow;
+}
+
+table#movies th.nonhilite {
+  background-color: rgb(255, 204, 153);
 }
 
 .button {
